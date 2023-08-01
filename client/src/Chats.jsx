@@ -11,7 +11,7 @@ const Chats = ({ socket, username, roomID }) => {
             roomID,
             username,
             message: currentMessage,
-            time: `${(new Date(Date.now()).getHours()) - 12}:${new Date(Date.now()).getMinutes()}:${new Date(Date.now()).getSeconds()}`
+            time: `${(new Date(Date.now()).getHours())%12}:${new Date(Date.now()).getMinutes()}:${new Date(Date.now()).getSeconds()}`
         }
         setMessageList((list) => [...list, messageData])
         await socket.emit("send_message", messageData);
