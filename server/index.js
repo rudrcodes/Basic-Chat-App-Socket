@@ -16,7 +16,7 @@ const io = new Server(httpServer, {
   cors: {
     // Connecting backend to front
 
-    origin: "https://yash-socket-chat-app.netlify.app",
+    origin: "https://rudransh-socket-chat-app.netlify.app",
     // origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
